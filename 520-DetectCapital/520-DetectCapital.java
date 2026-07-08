@@ -1,0 +1,16 @@
+// Last updated: 7/8/2026, 3:34:52 PM
+class Solution {
+    public boolean detectCapitalUse(String word) {
+        int n = word.length();
+        if (word.equals(word.toLowerCase())) {
+            return true;
+        }
+        if (word.equals(word.toUpperCase())) {
+            return true;
+        }
+        if (Character.isUpperCase(word.charAt(0)) && word.substring(1).equals(word.substring(1).toLowerCase())) {
+            return true;
+        }
+        return false;
+     }
+}
